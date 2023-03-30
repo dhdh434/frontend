@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TopBanner from './Blah';
+import MovieList from './Movies';
+
+class Conclusion extends React.Component {
+  render() {
+    return <p>Toodles!</p>;
+  }
+}
+
+// function Rando() {
+//   return (
+//     <div>
+//       <h2>Random Number: {Math.random()}</h2>
+//     </div>
+//   );
+// }
+
+// function GoButton(props: any) {
+//   return (
+//     <div>
+//       <button onClick={props.blahGo}>GO!</button>
+//       <br></br>
+//     </div>
+//   );
+// }
+
+// function AmountOfGo(props: any) {
+//   return <label>{props.num}</label>;
+// }
 
 function App() {
+  // const [count, setCount] = useState(0);
+  // const incrementGo = () => setCount(count + 1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopBanner saying="Dave's Website" />
+      <MovieList />
+      {/* <Rando /> */}
+      {/* <GoButton blahGo={incrementGo} /> */}
+      {/* <AmountOfGo num={count} /> */}
+      <br />
+      <br />
+      <br />
+      <Conclusion />
     </div>
   );
 }
