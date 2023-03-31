@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
+import './sstyles.css';
 
 function Navbar() {
   return (
@@ -33,7 +34,7 @@ function Navbar() {
     // </nav>
 
     <div>
-      <nav style={{ backgroundColor: 'light' }}>
+      <nav className="nav" style={{ backgroundColor: 'light' }}>
         <ul>
           <li>
             <Link to="/"> Home</Link>

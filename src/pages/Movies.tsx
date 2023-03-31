@@ -1,5 +1,4 @@
 import data from '../MovieData.json';
-import styles from '../Blah.module.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MDS = data.MovieData;
@@ -24,14 +23,14 @@ function MovieList() {
     <>
       <div>
         {/* give the h2 some style */}
-        <h2 className={styles.h2}>Joel Hilton's Movie Collection</h2>
+        <h2 className="text-center">Joel Hilton's Movie Collection</h2>
         <br />
       </div>
 
       <div>
         <table className="table">
           <thead>
-            <tr>
+            <tr className="text-center">
               {/* table headers */}
               <th>Title</th>
               <th>Year</th>
@@ -44,7 +43,7 @@ function MovieList() {
           <tbody>
             {/* connect to the map and get info for each thing */}
             {MDS.map((m) => (
-              <tr>
+              <tr className="text-center">
                 <td>{m.Title}</td>
                 <td>{m.Year}</td>
                 <td>{m.Director}</td>

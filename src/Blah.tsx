@@ -5,13 +5,18 @@ function TopBanner() {
   return (
     <>
       <div>
-        <div className="col-2">
+        <div style={{ textAlign: 'center' }}>
           {/* add an image */}
-          <img src="./JoelHiltonHeadshot.jpg" alt="picOfJoel" />
+          <br />
+          <img
+            src="./JoelHiltonHeadshot.jpg"
+            alt="picOfJoel"
+            style={{ display: 'block', margin: 'auto', textAlign: 'center' }}
+          />
         </div>
 
         {/* add a title */}
-        <div className="col align-self-center text-start">
+        <div className="col align-self-center text-center">
           <h2 className={styles.h1}>
             This website is a list of all the movies from Joel
           </h2>
