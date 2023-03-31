@@ -33,6 +33,7 @@ function App() {
   // const incrementGo = () => setCount(count + 1);
 
   return (
+    //add a navigation section
     <div>
       <BrowserRouter>
         <Routes>

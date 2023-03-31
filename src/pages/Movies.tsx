@@ -29,6 +29,7 @@ function MovieList() {
         <table className="table">
           <thead>
             <tr>
+              {/* table headers */}
               <th>Title</th>
               <th>Year</th>
               <th>Director</th>
@@ -38,6 +39,7 @@ function MovieList() {
             </tr>
           </thead>
           <tbody>
+            {/* connect to the map and get info for each thing */}
             {MDS.map((m) => (
               <tr>
                 <td>{m.Title}</td>

@@ -3,6 +3,7 @@ import React from 'react';
 function PodcastInfo() {
   return (
     <>
+      {/* return a title and a link to baconsale */}
       <div>
         <h1>Podcast</h1>
         <div className="col align-self-center text-start">
