@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './Blah.module.css';
 
-function TopBanner({ saying }: any) {
+function TopBanner() {
   return (
     <>
       <div>
         <div className="col-2">
-          <img src="./logo192.png" alt="companyLogo" />
+          <img src="./JoelHiltonHeadshot.jpg" alt="picOfJoel" />
         </div>
 
         <div className="col align-self-center text-start">
-          <h1 className={styles.h1}>{saying}</h1>
+          <h2>This website is a list of all the movies from Joel</h2>
         </div>
       </div>
     </>

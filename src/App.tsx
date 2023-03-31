@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TopBanner from './Blah';
-import MovieList from './Movies';
-
-class Conclusion extends React.Component {
-  render() {
-    return <p>Toodles!</p>;
-  }
-}
+import MovieList from './pages/Movies';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import PodcastInfo from './pages/podcast';
+import Home from './pages/Home';
 
 // function Rando() {
 //   return (
@@ -37,15 +34,20 @@ function App() {
 
   return (
     <div>
-      <TopBanner saying="Dave's Website" />
-      <MovieList />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="Movies" element={<MovieList />} />
+            <Route path="podcast" element={<PodcastInfo />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
+      {/* <MovieList /> */}
       {/* <Rando /> */}
       {/* <GoButton blahGo={incrementGo} /> */}
       {/* <AmountOfGo num={count} /> */}
-      <br />
-      <br />
-      <br />
-      <Conclusion />
     </div>
   );
 }

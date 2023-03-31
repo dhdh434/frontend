@@ -1,24 +1,23 @@
-import { useState } from 'react';
-import data from './MovieDataSample.json';
+import data from '../MovieData.json';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-const MDS = data.MovieDataSample;
+const MDS = data.MovieData;
 
 function MovieList() {
-  const [listOMovies, setListOMovies] = useState(MDS);
+  // const [listOMovies, setListOMovies] = useState(MDS);
 
-  const addMovie = () => {
-    setListOMovies([
-      ...MDS,
-      {
-        Category: 'Action/Adventure',
-        Title: 'Batman Returns',
-        Year: 1992,
-        Director: 'Tim Burton',
-        Rating: 'PG-13',
-      },
-    ]);
-  };
+  // const addMovie = () => {
+  //   setListOMovies([
+  //     ...MDS,
+  //     {
+  //       Category: 'Action/Adventure',
+  //       Title: 'Batman Returns',
+  //       Year: 1992,
+  //       Director: 'Tim Burton',
+  //       Rating: 'PG-13',
+  //     },
+  //   ]);
+  // };
 
   return (
     <>
@@ -35,25 +34,27 @@ function MovieList() {
               <th>Director</th>
               <th>Rating</th>
               <th>Category</th>
+              <th>Edited</th>
             </tr>
           </thead>
           <tbody>
-            {listOMovies.map((m) => (
+            {MDS.map((m) => (
               <tr>
                 <td>{m.Title}</td>
                 <td>{m.Year}</td>
                 <td>{m.Director}</td>
                 <td>{m.Rating}</td>
                 <td>{m.Category}</td>
+                <td>{m.Edited}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <button className="btn btn-primary" onClick={addMovie}>
+      {/* <button className="btn btn-primary" onClick={addMovie}>
         Add Movie
-      </button>
+      </button> */}
     </>
   );
 }
