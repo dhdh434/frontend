@@ -33,7 +33,7 @@ function Navbar() {
     // </nav>
 
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav style={{ backgroundColor: 'light' }}>
         <ul>
           <li>
             <Link to="/"> Home</Link>

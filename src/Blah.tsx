@@ -12,7 +12,9 @@ function TopBanner() {
 
         {/* add a title */}
         <div className="col align-self-center text-start">
-          <h2>This website is a list of all the movies from Joel</h2>
+          <h2 className={styles.h1}>
+            This website is a list of all the movies from Joel
+          </h2>
         </div>
       </div>
     </>

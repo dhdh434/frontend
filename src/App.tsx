@@ -34,7 +34,7 @@ function App() {
 
   return (
     //add a navigation section
-    <div>
+    <div style={{ backgroundColor: 'pink' }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

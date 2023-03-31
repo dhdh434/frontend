@@ -1,4 +1,5 @@
 import data from '../MovieData.json';
+import styles from '../Blah.module.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MDS = data.MovieData;
@@ -22,7 +23,9 @@ function MovieList() {
   return (
     <>
       <div>
-        <h3>Joel Hilton's Movie Collection</h3>
+        {/* give the h2 some style */}
+        <h2 className={styles.h2}>Joel Hilton's Movie Collection</h2>
+        <br />
       </div>
 
       <div>
