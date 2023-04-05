@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { Movies } from '../movieType';
 
 function FoodList() {
+  //set the database variable
   const [foodData, setFoodData] = useState<Movies[]>([]);
 
+  // use effect collects the info from the json
   useEffect(() => {
     const fetchFood = async () => {
       const rsp = await fetch('https://localhost:4000/movie');
@@ -20,9 +22,11 @@ function FoodList() {
         <h2 className="text-center">Joel Hilton's Movie Collection</h2>
         <br />
       </div>
+      {/* create the table */}
       <table className="table table-bordered">
         <thead>
           <tr className="text-center">
+            {/* table headings */}
             <th>Title</th>
             <th>Category</th>
             <th>Year</th>
@@ -34,6 +38,7 @@ function FoodList() {
           </tr>
         </thead>
         <tbody>
+          {/* mapping the info and displaying the info in each row */}
           {foodData.map((f) => (
             <tr className="text-center" key={f.movieId}>
               <td>{f.title}</td>

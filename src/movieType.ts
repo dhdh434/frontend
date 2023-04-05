@@ -1,3 +1,4 @@
+//table for the movie object
 export type Movies = {
   movieId: number;
   category: string;
