@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MovieList from './pages/Movies';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import PodcastInfo from './pages/podcast';
 import Home from './pages/Home';
+import FoodList from './pages/MovieList';
 
 // function Rando() {
 //   return (
@@ -39,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="Movies" element={<MovieList />} />
+            <Route path="Movies" element={<FoodList />} />
             <Route path="podcast" element={<PodcastInfo />} />
           </Route>
         </Routes>
